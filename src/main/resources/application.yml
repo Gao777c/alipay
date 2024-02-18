@@ -1,0 +1,39 @@
+server:
+#  port: 9999
+  port: 8949
+
+
+spring:
+  datasource:
+    username: root
+    password: Weige@309
+    url: jdbc:mysql://192.168.100.66/xdb?serverTimezone=GMT%2b8&characterEncoding=utf8
+  redis:
+    port: 6379
+    host: 192.168.100.66
+    password: Weige@309
+
+logging:
+  level:
+    com.weige: debug
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+  type-aliases-package: com.weige.*.entity
+#  mapper-locations: classpath:mapper/*.xml
+
+alipay:
+  appId: 9021000123612433
+  appPrivateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCKfKlpUMSYNws7Auuit0GL/oPVqQkK2pIWZ00ifOgnC2v9zdt3j2YmgNfEqUO/bc05V6JlKP8NVHUHmqDpLAFo2NBp+NNvopq3uT/VjmEbPNy5fqQDQkA0rBNEZN2HL/bXXquUUpXVuAcBZuXI8gCroAG5xh6zDHnvmwdNBYCkrEfuLO6FRpWoeYPRzND6Zc/aMCHCrqr9yqq6JGTobW6oloPkvg4NVjNoyie6DDyCVIzct26RvoEwQCYDEg/+SAK9Ot14tmqBS4G6vcUmdQ16Hd5mIg6yPO22Ies8pMyk18RFy1lWLdUatyXtn2IbhSdcHZRx56FrvOAqWqXgOYMVAgMBAAECggEAVgF3wPUtMw80RVDaAHLpHUVSoNXazMfTZGCBUgLatqzsQ3KecxE2soDf/73TWkaZ5pvbOhIM3D1wdOl+N3Fh6riELtwei70jcyh0UW+cNStGNVlGCNQTReL8EETII5YRKc4cpv/nGBSzHRbHbFWHPw8fIz28gRwlej4AecAKFboN4r+bFccVbhM5iOJihUC9kh1mNkjG9fMLcYg40IU+Z4kpdGrVMetVHRlPrE9SdALrvh4nkn0SS6gmNAplzMgozJFbSPdR6OeSp91+4fFJ9nrIkm1Ng+Mz+TpA/jOlcOgOs5Ics80Vb7+jf+6vSpkz9DmydCOX+Vyq15tNb9BugQKBgQDoRDpkoIjRHHrbjkAAOsCgz9otW/BZy5INJb+SDZaiMFbKTz7StOnI9M8NFBrP79i0dw3InU14i3KEn3aACDms3rbRkbll1WDjFRfaVSNCl1DuCXvMDGqDaQxQrTA/99vXdM049zNgb17w1O+q7Hp7NV39yM4rlJAld+iApAHmoQKBgQCYo0os0kRkie12p99XSgMl06cVm2bGS2liS4D32/O0/C+Xe8UgTqb0XCCchzFBE4qPAgB8nucjXub3bPnD6EGpoCID2W+2iETxj/dgr2qjQWtPCl+tSIin7PM48+yPg+Vqm5zQz+5w1wOTtB45tq8NW2ozWjTgcJp3NMGneHLr9QKBgQCsSI+XvIw/sARhfy5x/SKNJiALrTqnIJ0BK5Lh3zpwq7J09jr/SDpxWUWLyfHpc1sm4XhT6npgg+85+J6JcZB2bezlnlYK9y+awTakOKqi5mKdbmNpg3wuZWlBHnW/vTZQps7jBloRmgquUQRFoItpgLhrWtuy78vMPxky8nSGgQKBgG4MlQc51quyMi5xnHpf12MndXkDoRbo+iMvkt2hjNV5WYrbZuYDLyZRYgXZBy8HOsgexmETZEzBOL89p9qSkv0MglnKJFwzZZnQlaf08WqhWRAUx6S0/ioskbQHUhCrJPY3GdoHgL+EloSgwYYU66MyvKAnsqX7KbM2q0Tmd90dAoGAEt8taLjtxaqZrheQS9vwLA7c36UDTD8gMmFmjypggs/2TCElvFNKwY+5bAANFfR6zNDWCfT1Em1GUrdrE5Fu42ksUK9QnfSu9rqhAc0WjEl9mhVBOF2FdYd2up3+MbM6aXSB0ApJvTIE1MZBXtmw97VYXTrwvanGaE7PTR5ZTSY=
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiIg23JTr4zFkVK1KNUrUJF1sjGLX3BpMVKtYQlYH6q+OQswmVRr8TE5GyfKHj6A721PR3cvwDu59vGXYo0gmEFdfkyRmsKWuOBeAgJr2Djrdj/k5H/LQplXS6h65zKpTEpV3lS9IzL1BDlwiu4KtJln9EzeVbnEkHWB7/+c8BqoliCh7gk460PWIXrWx/1Ms5+SwARtKtdtikvEt2JVNXH4x0U3aqP2aWip8UTM8luI6zpEGZlJxWc+MKVFiy/rGnWY8LBnjD2KReVzRue74bIXGxarQxfU5cEZY4Dw3wsOugKSdsRPwsRG4euKPw3NFGfUrAVjW4NrSRjFBJw4hnQIDAQAB
+  notifyUrl: http://i48syz.natappfree.cc/alipay/notify
+  returnUrl: http://localhost:8888/#/test/orders
+
+
+
+
+
